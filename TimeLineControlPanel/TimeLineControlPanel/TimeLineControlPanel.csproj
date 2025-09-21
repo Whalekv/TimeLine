@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<!-- 确保生成单文件可执行文件（可选，简化部署） -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>false</SelfContained>
+		<BaseOutputPath></BaseOutputPath>
+		<ApplicationIcon>TimeLine.ico</ApplicationIcon>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="TimeLine.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- 确保引用 WPF 核心库（通常自动包含，但显式添加以防万一） -->
+		<Reference Include="PresentationCore" />
+		<Reference Include="PresentationFramework" />
+		<Reference Include="WindowsBase" />
+		
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="TimeLine.ico" />
+	</ItemGroup>
+</Project>
